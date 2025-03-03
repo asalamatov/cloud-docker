@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: word-count-app
+spec:
+  replicas: 2  # Deploy at least two replicas for redundancy
+  selector:
+    matchLabels:
+      app: word-count
+  template:
+    metadata:
+      labels:
+        app: word-count
+    spec:
+      containers:
+      - name: word-count
+        image: my_word_count  # Ensure you've built and pushed this image to a registry (Docker Hub, ECR, or GCR)
+        volumeMounts:
+          - name: output-volume
+            mountPath: /home/data/output
+        command: ["python3", "/home/scripts/script.py"]
+      volumes:
+        - name: output-volume
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: word-count-service
+spec:
+  selector:
+    app: word-count
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+  type: ClusterIP
+
