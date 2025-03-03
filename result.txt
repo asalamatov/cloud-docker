@@ -1,0 +1,11 @@
+Word count in /Users/azamat/Desktop/UC/Spring2025/Cloud/docker_hw/data/IF-1.txt: 301
+Word count in /Users/azamat/Desktop/UC/Spring2025/Cloud/docker_hw/data/AlwaysRememberUsThisWay-1.txt: 223
+Grand Total Words: 524
+
+Top 3 words in /Users/azamat/Desktop/UC/Spring2025/Cloud/docker_hw/data/IF-1.txt:
+[('you', 20), ('and', 20), ('if', 14)]
+
+Top 3 words in /Users/azamat/Desktop/UC/Spring2025/Cloud/docker_hw/data/AlwaysRememberUsThisWay-1.txt (handling contractions):
+[('the', 13), ('and', 8), ('i', 8)]
+
+Container IP Address: 127.0.0.1
