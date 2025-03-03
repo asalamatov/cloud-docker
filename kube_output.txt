@@ -1,0 +1,2 @@
+NAME                         READY   STATUS              RESTARTS   AGE
+word-count-b49f475f4-82cn5   0/1     ContainerCreating   0          1s
